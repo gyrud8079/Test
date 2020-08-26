@@ -11,7 +11,7 @@ var btn = document.createElement('button');
 btn.textContent = 'input!';
 document.body.append(btn);
 
-
+console.log('dev!')
 
 // var word = '제로초';
 
