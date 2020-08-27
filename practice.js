@@ -11,7 +11,19 @@ var btn = document.createElement('button');
 btn.textContent = 'input!';
 document.body.append(btn);
 
+var result = document.createElement('div');
+document.body.append(result);
 
+btn.addEventListener('click', function 콜백함수 () {
+    if(단어.textContent[단어.textContent.length -1] === inputWindow.value[0]){
+        result.textContent = '딩동댕';
+        단어.textContent = inputWindow.value;
+        inputWindow.value = '';
+    }else {
+        result.textContent = '땡';
+    }
+} 
+);
 
 // var word = '제로초';
 
