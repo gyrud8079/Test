@@ -4,23 +4,32 @@ var 단어 = document.createElement('div');
 단어.textContent = '제로초';
 document.body.append(단어);
 
+var 폼 = document.createElement('form');
+document.body.append(폼);
+
 var inputWindow = document.createElement('input');
-document.body.append(inputWindow);
+폼.append(inputWindow);
+//document.body.append(inputWindow);
 
 var btn = document.createElement('button');
 btn.textContent = 'input!';
-document.body.append(btn);
+폼.append(btn);
+//document.body.append(btn);
 
 var result = document.createElement('div');
 document.body.append(result);
 
-btn.addEventListener('click', function 콜백함수 () {
+폼.addEventListener('submit', function 콜백함수 (e) {
+    e.preventDefault();
     if(단어.textContent[단어.textContent.length -1] === inputWindow.value[0]){
         result.textContent = '딩동댕';
         단어.textContent = inputWindow.value;
         inputWindow.value = '';
+        inputWindow.focus();
     }else {
         result.textContent = '땡';
+        inputWindow.value = '';
+        inputWindow.focus();
     }
 } 
 );
